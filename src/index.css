@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Honk&family=Open+Sans:wght@300;400;500;600;700&family=Readex+Pro:wght@200;300;400;500;700&family=Ubuntu+Condensed&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Concert+One&display=swap");
+body {
+  margin: 0;
+  background-color: #ddd0c8;
+  background: url("./img/cover1.jpg");
+  background-size: cover;
+}
+
+button {
+  cursor: pointer;
+}
+button:hover {
+  opacity: 0.7;
+}
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.head-h1 {
+  font-family: "Honk", system-ui;
+  font-size: -webkit-xxx-large;
+}
+
+.create-container {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  background-color: skyblue;
+  margin: 3px;
+  border-radius: 4px;
+}
+
+.create-container input {
+  margin: 4px;
+  width: 90%;
+  height: 30px;
+  outline: none;
+  border: none;
+  border-radius: 2px;
+  background-color: rgb(234, 240, 243);
+}
+
+.create-container textarea {
+  margin: 4px;
+  width: 90%;
+  height: 200px;
+  outline: none;
+  border: none;
+  border-radius: 2px;
+  background-color: rgb(234, 240, 243);
+}
+
+.create-container button {
+  margin: 4px;
+}
+
+.create-container > h1 {
+  font-family: "Honk", system-ui;
+}
+
+.edit-container {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  background-color: #77c767;
+  margin: 3px;
+  border-radius: 4px;
+}
+.edit-container input {
+  margin: 4px;
+  width: 90%;
+  height: 30px;
+  outline: none;
+  border: none;
+  border-radius: 2px;
+  background-color: rgb(206, 221, 166);
+}
+
+.edit-container textarea {
+  margin: 4px;
+  width: 90%;
+  height: 200px;
+  outline: none;
+  border: none;
+  border-radius: 2px;
+  background-color: rgb(206, 221, 166);
+}
+
+.edit-container button {
+  margin: 4px;
+}
+
+.edit-container > h1 {
+  font-family: "Honk", system-ui;
+  font-size: xx-large;
+}
+
+.reminders-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.reminder-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 300px;
+  background-color: #fafad5;
+  margin: 8px;
+  padding: 14px;
+  box-shadow: 6px 5px 5px #63634d;
+  position: relative;
+  border-radius: 4px;
+  font-family: "Concert One", sans-serif;
+}
+.reminder-div > h3 {
+  margin-top: 5px;
+  margin-bottom: 20px;
+  color: #3d0c3d;
+  font-size: x-large;
+  height: 10%;
+}
+.reminder-div > h5 {
+  overflow: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;
+  margin-top: 1px;
+  color: #2d2f69;
+  font-size: large;
+  height: 90%;
+}
+
+.delete-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: transparent;
+  border: none;
+}
+.edit-btn {
+  position: absolute;
+  bottom: 10px;
+  right: 0;
+  background: transparent;
+  border: none;
+}
+.save-btn {
+  background: transparent;
+  border: none;
+  font-size: -webkit-xxx-large;
+}
+.new-btn {
+  background: transparent;
+  border: none;
+  font-size: -webkit-xxx-large;
+}
+.create-confirm-btn {
+  background: transparent;
+  border: none;
+  font-size: -webkit-xxx-large;
+}
+.create-cancel-btn {
+  background: transparent;
+  border: none;
+  font-size: -webkit-xxx-large;
+}
+
+@media screen and (max-width: 420px) {
+  .reminders-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    margin-left: 0;
+  }
+  .reminder-div {
+    width: 290px;
+  }
+  .create-container {
+    width: 300px;
+  }
+  .edit-container {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 920px) and (min-width: 421px) {
+  .reminders-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    margin-left: 0;
+  }
+  .reminder-div {
+    width: 290px;
+  }
+  .create-container {
+    width: 300px;
+  }
+  .edit-container {
+    width: 300px;
+  }
+}
